@@ -6,7 +6,7 @@ function Grudges({grudges = []}) {
         <div>
             <h2>Grudges ({grudges.length})</h2>
             {grudges.map((grudge) => (
-                <Grudge key={grudge.id} grudge={grudge}/>
+                <Grudge key={grudge.id} grudge={grudge} onForgive={onForgive}/>
             ))}
         </div>
     );

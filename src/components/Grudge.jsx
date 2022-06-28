@@ -1,6 +1,8 @@
-import React from 'react';
+import React from "react";
+import { v4 as id } from "uuid";
 
-function Grudge({grudge: {person, reason, forgiven}} ) {
+function Grudge({ grudge: { person, reason, forgiven }, onForgive }) {
+    const forgive = () => onForgive(id);
     return (
         <div>
             <h3>{person}</h3>
@@ -10,7 +12,7 @@ function Grudge({grudge: {person, reason, forgiven}} ) {
                 type="checkbox"
                 id="forgiven"
                 checked={forgiven}
-                onChange={() => {}}
+                onChange={forgive}
             />
         </div>
     );
